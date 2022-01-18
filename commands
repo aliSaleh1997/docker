@@ -1,0 +1,80 @@
+saly 3 elnaby w samy ellah keda 
+___________________________________________________________
+
+docker pull nginx
+
+docker pull nginx:10.0                #version mo3ain
+
+docker run -d nginx 
+
+docker run -d --name nginx:latest -p 5000:80 nginx
+		                 #btdelo el name  w el port ely bt4a8al beh ahm 7aga akter men 3000
+
+docker run -d -v /root/data:/usr/share/nginx/html --name nginxxxx -p 5000:80 nginx
+ 		                 #btdelo volume t7ot feh eldata k index.html masln 
+ 
+docker ps                            #bi3rfk eah 4a8al
+ 
+docker ps -a                         #bi3rfk kolo ely 4a8al w ely 3atana
+ 
+docker stop #id                      #biw2f cotainer 
+
+docker attach id                     #bas me4 btst5dm 
+
+docker exec  -it  #id /bin/bash      #btda5lk gwa om elcontainer 
+
+docker exec #id ls                   #law me4 3awz t5o4 masln t3ml 7aga w 5alas 
+
+docker rm #id                        #d law hya 3atlana stop  container 
+
+
+docker rmi #id                       #btms7 image 
+
+docker images                        #btwarek eah el image ely 3andk 
+
+docker commit #id                    #ana keda bas7b image men container 3awz aba2a ast5dmha 
+
+docker image tag #id nginx:5ara     # law 3awz ady l image tag  5ara
+
+docker login 		      #law 3awz a3ml login 
+
+docker tag nginx:5ara alisaleh55555/llah 
+			      #law 3awz a3mlha push fa ana bhi2ha 3andy
+
+docker push alisaleh55555/llah      #keda 3amlna push leha f el acc 3andy
+
+docker inspect #id                  # info 
+
+docker-compose up			#docker file run .yml  
+
+
+docker-compose up --build		#docker file run .yml rebuild
+  
+
+
+docker run -d -p 9090:80 webdevops/php-nginx:7.3   #nginx&php
+
+docker rm -f $(docker ps -aq)		#remove all containers
+
+
+
+docker rmi -f $(docker images -aq)
+
+
+docker cp <containerId>:/file/path/within/container /host/path/target
+
+
+docker create -ti --name dummy IMAGE_NAME bash
+docker cp dummy:/path/to/file /dest/to/file
+docker rm -f dummy
+
+
+docker run --name=php -d -v /etc/ansible/www.conf:/etc/php/7.4/pool.d/www.conf  -p 8080:80 apachephp
+
+
+
+ssh
+
+
+
+/etc/ansible/www.conf:/etc/php/7.4/pool.d/www.conf 
